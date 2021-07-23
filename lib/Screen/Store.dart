@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertest/Utility/colors.dart';
 import 'package:fluttertest/Utility/styles.dart';
 import 'package:fluttertest/Widget/cardwidget.dart';
+import 'package:fluttertest/Widget/find_button.dart';
 
 class Store extends StatelessWidget {
   @override
@@ -10,20 +11,24 @@ class Store extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           return (Scaffold(
-            appBar: AppBar(
-              backgroundColor: Colors.white,
-              leading: Builder(builder: (BuildContext context) {
-                return IconButton(
-                  icon: Icon(
-                    Icons.arrow_back,
-                    color: Colors.black,
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                );
-              }),
+            appBar:  AppBar(
+          backgroundColor: Colors.white,
+          leading: IconButton( 
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ), onPressed: () { Navigator.pop(context);  }, 
             ),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.favorite,
+                color: Colors.black,
+              ),
+              onPressed: () {},
+            ),
+          ],
+        ),
             body: Center(
               child: SingleChildScrollView(
                 child: Container(
@@ -128,6 +133,14 @@ class Store extends StatelessWidget {
                                 constraints,
                                 "39",
                               ),
+                            ],
+                          ),
+                            SizedBox(
+                            height: constraints.maxHeight * 0.02,
+                          ),
+                          Column(
+                            children: [
+                               FindButton(constraints, "Find in store", (){}),
                             ],
                           )
                         ],

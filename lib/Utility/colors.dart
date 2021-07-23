@@ -7,4 +7,7 @@ class CustomColors {
   static const gray2 = const Color(0xff607d8b);
   static const indigoShade = const Color(0xffe8eaf6);
   static const grey50 = const Color(0xfffafafa);
+  static const perrywinkle = const Color(0xFFB3E5FC);
+  static const whiteTwo = const Color(0xFF546E7A);
+
 }
