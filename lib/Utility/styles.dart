@@ -14,6 +14,14 @@ class Styles {
       fontWeight: FontWeight.bold,
       fontFamily: "Playfair Display",
       fontStyle: FontStyle.normal,
-      fontSize: 12.0);
+      fontSize: 17.0);
+  
+   static const TextStyle sub2 = TextStyle(
+      color: CustomColors.blackPearl2,
+      fontWeight: FontWeight.bold,
+      fontFamily: "Playfair Display",
+      fontStyle: FontStyle.normal,
+      fontSize: 15.0);
+  
 }
 

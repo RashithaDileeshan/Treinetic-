@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertest/Screen/Store.dart';
 import 'package:fluttertest/Utility/colors.dart';
 import 'package:fluttertest/Utility/styles.dart';
-import 'package:fluttertest/Widget/card_widget.dart';
-
 class NewArrival extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -63,39 +62,50 @@ class NewArrival extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          Container(
-                            padding: EdgeInsets.only(
-                                left: constraints.maxWidth / 15,
-                                right: constraints.maxWidth / 15),
-                            height: constraints.maxHeight / 2,
-                            decoration: BoxDecoration(
-                              color: Colors.indigo[50],
-                              borderRadius: BorderRadius.circular(18),
-                            ),
-                            child: Column(
-                              children: [
-                                Image.asset('assets/images/new1.png',
-                                    width: constraints.maxWidth / 1),
-                                Row(children: [
-                                  Text("Women running shoes"),
-                                ]),
-                                SizedBox(
-                                  height: constraints.maxHeight / 160,
-                                ),
-                                Row(children: [
-                                  Text(
-                                    "React Escape Run",
-                                    style: Styles.headdingStyle,
+                          GestureDetector(
+                            child: Container(
+                              padding: EdgeInsets.only(
+                                  left: constraints.maxWidth / 15,
+                                  right: constraints.maxWidth / 15),
+                              height: constraints.maxHeight / 2,
+                              decoration: BoxDecoration(
+                                color: Colors.indigo[50],
+                                borderRadius: BorderRadius.circular(18),
+                              ),
+                              child: Column(
+                                children: [
+                                  Image.asset('assets/images/running_shoes_PNG5816.png',
+                                      width: constraints.maxWidth / 1),
+                                  Row(children: [
+                                    Text("Women running shoes"),
+                                  ]),
+                                  SizedBox(
+                                    height: constraints.maxHeight / 160,
                                   ),
-                                ]),
-                                SizedBox(
-                                  height: constraints.maxHeight / 200,
-                                ),
-                                Row(children: [
-                                  Text("135",style: Styles.subStyle,),
-                                ]),
-                              ],
+                                  Row(children: [
+                                    Text(
+                                      "React Escape Run",
+                                      style: Styles.headdingStyle,
+                                    ),
+                                  ]),
+                                  SizedBox(
+                                    height: constraints.maxHeight / 200,
+                                  ),
+                                  Row(children: [
+                                    Text(
+                                      "135",
+                                      style: Styles.subStyle,
+                                    ),
+                                  ]),
+                                ],
+                              ),
                             ),
+                            onTap: () => {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Store()))
+                            },
                           ),
                         ],
                       )
