@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertest/Screen/Store.dart';
 import 'package:fluttertest/Utility/colors.dart';
 import 'package:fluttertest/Utility/styles.dart';
+
 class NewArrival extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -34,7 +35,7 @@ class NewArrival extends StatelessWidget {
                     children: [
                       Flexible(
                         child: SizedBox(
-                          height: constraints.maxHeight * 0.1,
+                          height: constraints.maxHeight * 0.05,
                         ),
                       ),
                       Container(
@@ -58,7 +59,7 @@ class NewArrival extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: constraints.maxHeight * 0.06,
+                        height: constraints.maxHeight * 0.02,
                       ),
                       Column(
                         children: [
@@ -74,7 +75,8 @@ class NewArrival extends StatelessWidget {
                               ),
                               child: Column(
                                 children: [
-                                  Image.asset('assets/images/running_shoes_PNG5816.png',
+                                  Image.asset(
+                                      'assets/images/running_shoes_PNG5816.png',
                                       width: constraints.maxWidth / 1),
                                   Row(children: [
                                     Text("Women running shoes"),

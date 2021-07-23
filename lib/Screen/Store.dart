@@ -11,24 +11,27 @@ class Store extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           return (Scaffold(
-            appBar:  AppBar(
-          backgroundColor: Colors.white,
-          leading: IconButton( 
-            icon: Icon(
-              Icons.arrow_back,
-              color: Colors.black,
-            ), onPressed: () { Navigator.pop(context);  }, 
-            ),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(
-                Icons.favorite,
-                color: Colors.black,
+            appBar: AppBar(
+              backgroundColor: Colors.white,
+              leading: IconButton(
+                icon: Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
               ),
-              onPressed: () {},
+              actions: <Widget>[
+                IconButton(
+                  icon: Icon(
+                    Icons.favorite,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {},
+                ),
+              ],
             ),
-          ],
-        ),
             body: Center(
               child: SingleChildScrollView(
                 child: Container(
@@ -40,7 +43,7 @@ class Store extends StatelessWidget {
                     children: [
                       Flexible(
                         child: SizedBox(
-                          height: constraints.maxHeight * 0.1,
+                          height: constraints.maxHeight * 0.05,
                         ),
                       ),
                       Column(
@@ -57,7 +60,8 @@ class Store extends StatelessWidget {
                               ),
                               child: Column(
                                 children: [
-                                  Image.asset('assets/images/running_shoes_PNG5816.png',
+                                  Image.asset(
+                                      'assets/images/running_shoes_PNG5816.png',
                                       width: constraints.maxWidth / 1),
                                 ],
                               ),
@@ -115,32 +119,32 @@ class Store extends StatelessWidget {
                             ],
                           ),
                           Row(
-                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               SelectCard(
                                 constraints,
                                 "36",
                               ),
-                               SelectCard(
+                              SelectCard(
                                 constraints,
                                 "37",
                               ),
-                               SelectCard(
+                              SelectCard(
                                 constraints,
                                 "38",
                               ),
-                               SelectCard(
+                              SelectCard(
                                 constraints,
                                 "39",
                               ),
                             ],
                           ),
-                            SizedBox(
+                          SizedBox(
                             height: constraints.maxHeight * 0.02,
                           ),
                           Column(
                             children: [
-                               FindButton(constraints, "Find in store", (){}),
+                              FindButton(constraints, "Find in store", () {}),
                             ],
                           )
                         ],
